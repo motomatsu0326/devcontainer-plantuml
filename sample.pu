@@ -1,0 +1,15 @@
+@startuml
+
+title シーケンス図
+
+participant Controller
+database DynamoDB
+participant Worker
+
+Controller -> DynamoDB: リクエスト
+Controller <-- DynamoDB: レスポンス
+
+Controller -> Worker: リクエスト
+Controller <-- Worker: レスポンス
+
+@enduml
